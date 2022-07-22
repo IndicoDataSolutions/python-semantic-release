@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 
 def get_prerelease_pattern():
-    return f"-{config.get('prerelease_tag')}\.\d+"
+    return f"-{re.escape(config.get('prerelease_tag'))}\.\d+"
 
 
 def get_version_pattern():
