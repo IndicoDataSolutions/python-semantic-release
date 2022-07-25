@@ -226,7 +226,7 @@ def bump_version(new_version, level_bump):
 
     set_new_version(new_version)
     commit_new_version(new_version)
-    if config.get("tag_commit") and config.get("version_source") == "tag":
+    if config.get("tag_commit") == "false" and config.get("version_source") == "tag":
         tag_new_version(new_version)
 
 
